@@ -11,20 +11,28 @@
     crossorigin="anonymous"></script>
   <script src="jquery.fullPage.js"></script>
   <script src="main.js"></script>
+  <script src="https://kit.fontawesome.com/11bef623db.js" crossorigin="anonymous"></script>
 </head>
 
 <body style="background-color: #131313;">
   <header>
     <nav class="navbar">
-
-      <div><a href="#1"><img src="dd"></a></div>
-      <ul>
+     
+      <div class="logo">
+        <a  href="#1"><img src="jinhyuk.png"></a>   
+      </div>
+      
+      <ul class="navbar-menu">
         <li><a href="#1">INTRO</a></li>
         <li><a href="#2">ABOUT</a></li>
         <li><a href="#3">STACKS</a></li>
         <li><a href="#4">WORKS</a></li>
         <li><a href="#5">CONTACT</a></li>
       </ul>
+
+      <a href="#" class="navbar-togglebtn">
+        <i class="fa-solid fa-bars fa-2xl"></i>
+      </a> 
 
     </nav>
   </header>
@@ -51,12 +59,17 @@
       <div class="intro">
         <h2>ABOUT ME</h2>
       <div class="intro-text">
-        안녕하세요.프론트엔드 개발자를 지망하는 최진혁입니다. <br>
-        반갑습니다. <br>        안녕하세요. <br>
-        반갑습니다. <br>        안녕하세요. <br>
-        반갑습니다. <br>        안녕하세요. <br>
-        반갑습니다. <br>        안녕하세요. <br>
-        반갑습니다. <br>
+        안녕하세요. 프론트엔드 개발자를 지망하는 최진혁입니다. <br>
+        저는 한가지에 꽂히면 끝까지 하는 사람입니다.<br>
+        앞으로는 나서지는 않지만 묵묵하게 제자리를 지키는 성실함이 제 장점입니다. <br>
+        학창시절에는 그림그리기를 좋아하여 대학을 미술쪽으로 진학할려했으나 실패하여 방황하며 <br>
+        1년간 아르바이트를 하며 협동심과 단체생활을 배웠으며 그 이후 재수를 하여 대학에 들어갔습니다. <br>
+        군 제대 후 과가 적성에 맞지않아 자퇴를 결정했으며 <br>
+        그 이후 국비지원을 통해 6개월간 기본적인 자바,파이썬,제이쿼리,리액트 등등을 배웠습니다. <br>
+        이 짧은 순간에 완벽히 마스터 할수는 없었지만 다른 사람들과 소통할 정도는 되었습니다. <br>
+        항상 열심히 하고 배우고자 하는 사람이 되겠습니다.
+
+
       </div>
 
       </div> 
@@ -94,7 +107,7 @@ header {
   font-size: 16px;
   -webkit-tap-highlight-color: transparent;
   position: fixed;
-  display: inline-block;
+
   width: 100%;
   height: 70px;
   padding: 0 50px;
@@ -105,34 +118,78 @@ header {
   z-index: 9999;
   
 }
+.navbar-togglebtn {
+  display: none;
+  position: absolute;
+}
 
+i {
+  color: white;
+}
+
+.logo img {
+  height: 40px;
+  filter: invert(50%) sepia(62%) saturate(2279%) hue-rotate(159deg) brightness(92%) contrast(101%);
+}
 .navbar {
-    
-    width: 100%;
-    
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
   }
-  .navbar>div { float: left; }
-  .navbar>ul {
-    float: right;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    align-items: center;
-  }
-  .navbar>ul>li {
-    display: inline-block;
-    padding: 0;
-    align-items: center;
-  }
-  .navbar a {
-    display: block;
+
+.navbar-menu { 
+  display: flex;
+  list-style: none;
+}
+
+.navbar-menu li {
+  padding: 8px 12px;
+}
+  .navbar-menu a {
     text-decoration: none;
     padding: 10px 20px;
     color: white;
   }
-  .navbar a:hover { 
+  .navbar-menu a:hover { 
     border-bottom: 2px solid white; 
   }
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-togglebtn {
+    padding-top: 20px;
+    display: block;
+    
+  }
+
+  .logo {
+    padding-top: 30px;
+    display: inline;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+    
+  }
+  .navbar-menu li {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 40px 0 40px 0;
+  }
+
+}
+  
+
+
 
 .title {
   display: flex;
@@ -146,7 +203,6 @@ header {
   padding: 0 10px;
   margin: 0;
   color: white;
-  line-height: 9vw;
   font-size: 9.1vw;
   font-weight: 900;
   overflow: hidden;
@@ -167,7 +223,7 @@ header {
     width: 0;
   }
   to{
-    width: 1020px;
+    width: 65vw;
   }
 }
 .title > h2 {
@@ -237,7 +293,7 @@ border-radius: 50px;
 
 
 
-.intro > h2 {
+h2 {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: white;
   display: flex;
@@ -255,8 +311,10 @@ border-radius: 50px;
   flex-direction: column;
   padding-top: 100px;
   padding-left: 40px;
+  padding-right: 40px;
+  line-height: 4vh;
   margin: 0 auto;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 300;
   
 }
