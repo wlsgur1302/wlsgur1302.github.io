@@ -29,12 +29,26 @@
         <li><a href="#4">WORKS</a></li>
         <li><a href="#5">CONTACT</a></li>
       </ul>
+     
+      <a class="hamburger-button" href="#">   
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
 
-      <a href="#" class="navbar-togglebtn">
-        <i class="fa-solid fa-bars fa-2xl"></i>
-      </a> 
-
-    </nav>
+      <div class="overlay">
+        <nav class="overlay-menu">   
+          <ul>
+            <li><a href="#1">INTRO</a></li>
+            <li><a href="#2">ABOUT</a></li>
+            <li><a href="#3">STACKS</a></li>
+            <li><a href="#4">WORKS</a></li>
+            <li><a href="#5">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+    
   </header>
 
   <main id="fullpage">
@@ -101,13 +115,14 @@
 </body>
 
 <style>
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 
 header {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 16px;
   -webkit-tap-highlight-color: transparent;
   position: fixed;
-
   width: 100%;
   height: 70px;
   padding: 0 50px;
@@ -118,14 +133,124 @@ header {
   z-index: 9999;
   
 }
-.navbar-togglebtn {
-  display: none;
-  position: absolute;
+
+.hamburger-button {
+	position: absolute;
+	transition: .3s ease-in-out;
+	width: 45px;
+	height: 34px;
+	display: none;
+	top: 2rem;
+	right: 2rem;
+	z-index: 100;
 }
 
-i {
-  color: white;
+.hamburger-button span {
+		position: absolute;
+		height: 8px;
+		border-radius: 4px;
+		width: 100%;
+		background-color: white;
+		top: 0;
+		transition: transform .2s ease-in-out, opacity .2s ease-in-out;
+	}
+.hamburger-button span:nth-child(1) {
+		top: 0px;
+	}
+
+.hamburger-button span:nth-child(2),
+.hamburger-button span:nth-child(3) {
+	top: 13px;
 }
+
+.hamburger-button span:nth-child(4) {
+	top: 26px;
+}
+
+.hamburger-button.active span {
+	background-color: #FFF;
+}
+
+.hamburger-button.active span:nth-child(1),
+.hamburger-button.active span:nth-child(4) {
+		opacity: 0;
+}
+
+.hamburger-button.active span:nth-child(2) {
+	transform: rotate(45deg);
+}
+
+.hamburger-button.active span:nth-child(3) {
+	transform: rotate(-45deg);
+}
+
+.overlay {
+  position: fixed;
+  background: black;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.overlay nav ul {
+  list-style: none;
+  padding:0;
+  margin: 0;
+}
+
+.overlay nav ul li {
+  margin: 1rem 0;
+  opacity: 0;
+}
+
+.overlay nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  transition: opacity 0.2s ease;
+}
+
+.overlay nav ul li a:hover {
+  border-bottom: 2px solid white;
+}
+
+@keyframes fadeInLeft {
+  0% { opacity: 0; transform: translateX(-25%);}
+  100% { opacity: 1; transform: translateX(0);}
+}
+
+.overlay.visible {
+  height: 100%;
+  opacity: .9;
+  
+}
+.overlay.visible nav ul li {
+  animation: fadeInLeft 0.3s ease forwards;
+}
+
+.overlay.visible nav ul li:nth-child(1) {
+  animation-delay: 0.23s;
+}
+.overlay.visible nav ul li:nth-child(2) {
+  animation-delay: 0.26s;
+}
+.overlay.visible nav ul li:nth-child(3) {
+  animation-delay: 0.29s;
+}
+.overlay.visible nav ul li:nth-child(4) {
+  animation-delay: 0.32s;
+}
+.overlay.visible nav ul li:nth-child(5) {
+  animation-delay: 0.35s;
+}
+
 
 .logo img {
   height: 40px;
@@ -155,30 +280,39 @@ i {
   }
 
 @media screen and (max-width: 768px) {
+
+  .overlay {
+    visibility: visible;
+  }
+
+  .overlay.visible {
+    visibility: visible;
+  }
+  
+  .hamburger-button {
+    display: block;
+  }
+
   .navbar {
     flex-direction: column;
     align-items: flex-start;
   }
-  .navbar-togglebtn {
-    padding-top: 20px;
-    display: block;
-    
+
+  .header {
+    display: flex;
   }
 
   .logo {
-    padding-top: 30px;
-    display: inline;
-    align-items: center;
-    justify-content: center;
+    display: flex;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
   }
 
   .navbar-menu {
     display: none;
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
-    width: 100%;
-    
+ 
   }
   .navbar-menu li {
     font-size: 1.2rem;
@@ -231,7 +365,7 @@ i {
   pointer-events: none;
   color: white;
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 3vw;
   font-weight: 700;
   letter-spacing: 1.2vw;
 }
@@ -299,7 +433,7 @@ h2 {
   display: flex;
   justify-content: center;
   letter-spacing: 0.8vw;
-  font-size: 50px;
+  font-size: 6vw;
 }
 
 .intro-text {
@@ -317,14 +451,6 @@ h2 {
   font-size: 1rem;
   font-weight: 300;
   
-}
-.contact > h2 {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color: white;
-  display: flex;
-  justify-content: center;
-  letter-spacing: 0.8vw;
-  font-size: 50px;
 }
 
 .contact-box {
@@ -355,4 +481,21 @@ h2 {
 
 
 </style>
+
+<script>
+
+$(function() {
+	$('.hamburger-button').on('click', function(event){
+		event.preventDefault();
+		
+		$(this).toggleClass('active');
+    $('.overlay').toggleClass('visible');
+
+	});
+});
+
+
+
+
+</script>
 </html>
