@@ -215,10 +215,24 @@ header {
   color: white;
   font-size: 30px;
   transition: opacity 0.2s ease;
+  position: relative;
+  padding: 6px 12px;
 }
 
-.overlay nav ul li a:hover {
-  border-bottom: 2px solid white;
+.overlay nav ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 4px;
+  background: #FFF;
+  transition: all .3s ease-out;
+}
+
+.overlay nav ul li a:hover::after {
+  width: 100%;
 }
 
 @keyframes fadeInLeft {
@@ -270,14 +284,29 @@ header {
 .navbar-menu li {
   padding: 8px 12px;
 }
-  .navbar-menu a {
-    text-decoration: none;
-    padding: 10px 20px;
-    color: white;
+.navbar-menu a {
+  font-size: 20px;
+  text-decoration: none;
+  position: relative;
+  padding: 10px 20px;
+  color: white;
+}
+
+.navbar-menu li a::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 4px;
+  background: #FFF;
+  transition: all .3s ease-out;
   }
-  .navbar-menu a:hover { 
-    border-bottom: 2px solid white; 
-  }
+
+.navbar-menu li a:hover::after { 
+  width: 100%; 
+}
 
 @media screen and (max-width: 768px) {
 
