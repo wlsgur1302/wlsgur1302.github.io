@@ -3,7 +3,7 @@ $(function(){
     $('#fullpage').fullpage({
         //options here
         autoScrolling:true,
-        navigation: true,
+        navigation: false,
         navigationTooltips: ['INTRO', 'ABOUT', 'STACKS', 'WORKS','CONTACT'],
         showActiveTooltip: true,
         
