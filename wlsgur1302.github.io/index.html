@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="icon" href="./img/jinhyuk.png"/>
+  <link rel="apple-touch-icon" href="./img/jinhyuk.png"/>
+  <title>최진혁 포트폴리오</title>
+
+  <link rel="stylesheet" href="jquery.fullPage.css">
+
+  <link rel="stylesheet" href="nav.css"> <!-- 네비바 -->
+  <link rel="stylesheet" href="intro.css"> <!-- 인트로 페이지 -->
+  <link rel="stylesheet" href="stack.css"> <!-- 스택 페이지 -->
+  <link rel="stylesheet" href="works.css"> <!-- 작업 페이지 -->
+  
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+    crossorigin="anonymous"></script> <!-- 제이쿼리 -->  
+  <script src="jquery.fullPage.js"></script>
+
+  <script src="main.js"></script>
+  <script src="https://kit.fontawesome.com/11bef623db.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+     
+      <div class="logo">
+        <a  href="#1"><img src="./img/jinhyuk.png"></a>   
+      </div>
+      
+      <ul class="navbar-menu">
+        <li><a href="#1">INTRO</a></li>
+        <li><a href="#2">ABOUT</a></li>
+        <li><a href="#3">STACKS</a></li>
+        <li><a href="#4">WORKS</a></li>
+        <li><a href="#5">CONTACT</a></li>
+      </ul>
+     
+      <a class="hamburger-button" href="#">   
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+
+      <div class="overlay">
+        <nav class="overlay-menu">   
+          <ul>
+            <li><a href="#1">INTRO</a></li>
+            <li><a href="#2">ABOUT</a></li>
+            <li><a href="#3">STACKS</a></li>
+            <li><a href="#4">WORKS</a></li>
+            <li><a href="#5">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+    
+  </header>
+
+  <main id="fullpage">
+
+    <section class="section">
+      <div class="title">
+        <h1>FRONT-END DEV</h1>
+      
+      </div>
+      <div class="title">
+        <h2>PORTFOLIO</h2>
+      </div>
+      <div class="scroll">
+        <div class="scroll-down"></div>
+        <p>scroll down</p>
+      </div>
+
+      
+    </section>
+
+    <section class="section">
+      <div class="intro">
+        <h2>ABOUT ME</h2>
+      <div class="intro-text">
+        안녕하세요. 프론트엔드 개발자를 지망하는 최진혁입니다. <br>
+        저는 한가지에 집중하면 끝까지 하는 사람입니다.<br>
+        앞으로는 나서지는 않지만 묵묵하게 제자리를 지키는 성실함이 제 장점입니다. <br>
+        국비지원을 통해 6개월간 기본적인 자바,파이썬,제이쿼리,리액트 등을 배웠습니다. <br>
+        이 짧은 순간에 완벽히 마스터 할수는 없었지만 다른 사람들과 소통할 정도는 되었습니다. <br>
+        항상 열심히 하고 배우고자 하는 사람이 되겠습니다.
+
+
+      </div>
+
+      </div> 
+    </section>
+
+
+
+    <section class="section">
+      
+      <h2>STACKS</h2>
+
+      <div class="stack-container"> 
+        <div class="front-end">
+          <div class="flip">
+            <div class="card">
+              <div class="front">
+                <img src="./img/html5.png">
+              </div>
+              <div class="back">
+                <h1 class="stacks">HTMl5</h1>
+                <br>
+                <p>웹접근성, 표준성을 준수하며 시멘틱태그를 이용 할 수 있습니다.</p>
+              </div>
+            </div>
+          </div>
+          <div class="flip">
+            <div class="card">
+              <div class="front">
+                <img src="./img/css3.png">
+              </div>
+              <div class="back">
+                <h1 class="stacks">CSS3</h1>
+                <br>
+                <p>position,display 등 다양한 태그를 적절히 사용하여 반응형웹을 적용 할 수 있습니다.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip">
+            <div class="card">
+              <div class="front">
+                <img src="./img/js.png">
+              </div>
+              <div class="back">
+                <h1 class="stacks">javascript</h1>
+                <br>
+                <p>javascript의 배열, 메소드 등을 이해하며 적용 할 수 있습니다.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip">
+            <div class="card">
+              <div class="front">
+                <img src="./img/reactjs.png">
+              </div>
+              <div class="back">
+                <h1 class="stacks">react</h1>
+                <br>
+                <p>간단하게 구조를 이해하고 함수형 컴포넌트 작성을 할 수 있습니다.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip">
+            <div class="card">
+              <div class="front">
+                <img src="./img/jquery.png">
+              </div>
+              <div class="back">
+                <h1 class="stacks">jquery</h1>
+                <br>
+                <p>관련 메소드나 애니메이션 등을 잘 활용 할 수 있습니다. </p>
+              </div>
+            </div>
+          </div>
+
+         <div class="flip">
+            <div class="card">
+              <div class="front">
+                <img src="./img/spring.png">
+              </div>
+              <div class="back">
+                <h1 class="stacks">spring</h1>
+                <br>
+                <p>spring을 이용한 컴포넌트 작성, 개발 등을 할 수 있습니다.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip">
+            <div class="card">
+              <div class="front">
+                <img src="./img/vue.png">
+              </div>
+              <div class="back">
+                <h1 class="stacks">VUE</h1>
+                <br>
+                <p>VUE를 이용한 컴포넌트 작성, 개발 등을 할 수 있습니다.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-stack">
+        <span class="item">
+          <img src="./img/html5.png" style="height: 50px; width: 50px;">
+          <div>
+            <p style="font-size: 1.2rem; margin: 0;">HTML5</p>
+          <p>웹접근성, 표준성을 준수하며 시멘틱태그를 이용 할 수 있습니다.</p>
+          </div>
+        </span>
+        <span class="item">
+          <img src="./img/css3.png" style="height: 50px; width: 50px;">
+          <div>
+            <p style="font-size: 1.2rem; margin: 0;">CSS3</p>
+            <p>position,display 등 다양한 태그를 적절히 사용하여 반응형웹을 적용 할 수 있습니다.</p>
+          </div>
+        </span>
+        <span class="item">
+          <img src="./img/js.png" style="height: 50px; width: 50px;">
+          <div>
+            <p style="font-size: 1.2rem; margin: 0;">javascript</p>
+            <p>javascript의 배열, 메소드 등을 이해하며 적용 할 수 있습니다.</p>
+          </div>
+          </span>
+        <span class="item">
+          <img src="./img/reactjs.png" style="height: 50px; width: 50px;">
+          <div>
+            <p style="font-size: 1.2rem; margin: 0;">react</p>
+            <p>간단하게 구조를 이해하고 함수형 컴포넌트 작성을 할 수 있습니다.</p>
+          </div>
+        </span>
+        <span class="item">
+          <img src="./img/jquery.png" style="height: 50px; width: 50px;">
+            <div>
+            <p style="font-size: 1.2rem; margin: 0;">jquery</p>
+            <p>관련 메소드나 애니메이션 등을 잘 활용 할 수 있습니다. </p>
+          </div>
+          </span>
+        <span class="item">
+          <img src="./img/spring.png" style="height: 50px; width: 50px;">
+          <div>
+            <p style="font-size: 1.2rem; margin: 0;">spring</p>
+            <p>spring을 이용한 컴포넌트 작성, 개발 등을 할 수 있습니다.</p>
+          </div>
+        </span>
+        <span class="item">
+          <img src="./img/vue.png" style="height: 50px; width: 50px;">
+          <div>
+            <p style="font-size: 1.2rem; margin: 0;">VUE</p>
+            <p>VUE를 이용한 컴포넌트 작성, 개발 등을 할 수 있습니다.</p>
+          </div>
+        </span>
+      </div>
+
+    </section>
+    <section class="section">
+      <h2>WORKS</h2>
+      
+      <div style="padding:10px; background-color: skyblue;">
+        <div class="slider-div">
+          <div><img src="project_img/01.png"></div>
+
+         </div>
+      </div> 
+
+    </section>
+
+    <footer class="section">
+      <div class="contact">
+        <h2>CONTACT</h2>
+        <div class="contact-box">
+          <p>PHONE : 010-4190-2997</p>
+          <p>E-MAIL : wlsgur1302@naver.com</p>   
+          <p>GITHUB : &nbsp; 
+            <a href="https://github.com/wlsgur1302">https://github.com/wlsgur1302</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+</body>
+
+<style>
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: #131313;
+}
+
+
+
+@keyframes fadeInDown {
+        0% {
+            opacity: 0;
+            transform: translate3d(0, -100%, 0);
+        }
+        to {
+            opacity: 1;
+            transform: translateZ(0);
+        }
+    }
+ 
+h2 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0.8vw;
+  font-size: 4.5vw;
+  opacity: 0;
+  transition: all 0.5s;
+  animation: fadeInDown 1s;
+}
+
+
+
+.intro-text {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+  padding: 0;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  padding-left: 40px;
+  padding-right: 40px;
+  line-height: 4vh;
+  margin: 0 auto;
+  font-size: 1rem;
+  font-weight: 300;
+  
+}
+
+
+
+.contact-box {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+  padding: 0;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  padding-left: 40px;
+  margin: 0 auto;
+  gap: 20px;
+  font-size: 1.2rem;
+  font-weight: 300;
+  
+}
+
+.contact-box > p > a {
+  text-decoration: none;
+  color: white;
+}
+
+.contact-box > p > a:hover {
+  color: rgb(252, 252, 185);
+}
+
+@media screen and (max-width: 768px) {
+
+  .overlay {
+    visibility: visible;
+  }
+
+  .overlay.visible {
+    visibility: visible;
+  }
+
+  .hamburger-button {
+    display: block;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header {
+    display: flex;
+  }
+
+  .logo {
+    display: flex;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+
+  .navbar-menu {
+    display: none;
+
+  }
+  .navbar-menu li {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 40px 0 40px 0;
+  }
+
+  .stack-container {
+    display: none;
+  }
+
+  .grid-stack {
+    display: grid;
+  }
+}
+
+
+</style>
+
+<script>
+
+$(function() {
+	$('.hamburger-button').on('click', function(event){
+		event.preventDefault();
+		
+		$(this).toggleClass('active');
+    $('.overlay').toggleClass('visible');
+
+	});
+});
+
+let observer = new IntersectionObserver((e)=>{
+    e.forEach((box)=>{
+        if (box.isIntersecting){
+        box.target.style.opacity = 1;
+        }
+    })
+})
+
+let h2 = document.querySelectorAll('h2') //h2 태그를 다 찾아줌
+observer.observe(h2[0]) //html 요소 감시해줌
+observer.observe(h2[1])
+observer.observe(h2[2])
+observer.observe(h2[3])
+observer.observe(h2[4])
+
+
+</script>
+</html>
