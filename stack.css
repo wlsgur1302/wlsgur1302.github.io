@@ -1,0 +1,107 @@
+.stack-container {
+    display: flex;
+    justify-content: flex-start;
+       
+  }
+  
+  .stack-container img {
+    height: 80px;
+    width: 80px;
+  }
+  
+  .front-end {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto; /*수평정렬*/
+  }
+  
+  .flip {
+    position: relative;
+    list-style-type: none;
+    float: left;
+    padding: 30px;
+    transform-style: preserve-3d;
+    height: 100px;
+    width: 150px;
+    perspective: 1100px;
+  
+  }
+  
+  .card {
+    
+    width: 100%; 
+    height: 100%;
+    position: relative;
+    transition: .4s;
+    transform-style: preserve-3d;
+    
+  }
+  
+  
+  .front, .back {
+    border: solid #2e2e2e;
+    background-color: black;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px;
+    position: absolute;
+    width: 100%; 
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  .front {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  
+  .back {
+     
+    transform: rotateY(180deg);
+  
+  }
+  
+  .flip:hover .card {
+    transform: rotateY(180deg);
+  }
+  
+  .stacks {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    margin: 0;
+    font-size: large;
+  }
+  
+  .stack-container p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-size: 0.8rem;
+  }
+  
+  .grid-stack {
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));         
+    gap: 10px;
+    padding-left: 5px;
+    padding-right: 15px;
+  
+  }
+  
+  .item {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    border: solid #2e2e2e;
+  }

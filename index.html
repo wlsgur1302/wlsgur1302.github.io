@@ -4,22 +4,32 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="icon" href="./img/jinhyuk.png"/>
+  <link rel="apple-touch-icon" href="./img/jinhyuk.png"/>
   <title>최진혁 포트폴리오</title>
 
   <link rel="stylesheet" href="jquery.fullPage.css">
+
+  <link rel="stylesheet" href="nav.css"> <!-- 네비바 -->
+  <link rel="stylesheet" href="intro.css"> <!-- 인트로 페이지 -->
+  <link rel="stylesheet" href="stack.css"> <!-- 스택 페이지 -->
+  <link rel="stylesheet" href="works.css"> <!-- 작업 페이지 -->
+  
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script> <!-- 제이쿼리 -->  
   <script src="jquery.fullPage.js"></script>
+
   <script src="main.js"></script>
   <script src="https://kit.fontawesome.com/11bef623db.js" crossorigin="anonymous"></script>
 </head>
 
-<body style="background-color: #131313;">
+<body>
   <header>
     <nav class="navbar">
      
       <div class="logo">
-        <a  href="#1"><img src="jinhyuk.png"></a>   
+        <a  href="#1"><img src="./img/jinhyuk.png"></a>   
       </div>
       
       <ul class="navbar-menu">
@@ -76,10 +86,7 @@
         안녕하세요. 프론트엔드 개발자를 지망하는 최진혁입니다. <br>
         저는 한가지에 집중하면 끝까지 하는 사람입니다.<br>
         앞으로는 나서지는 않지만 묵묵하게 제자리를 지키는 성실함이 제 장점입니다. <br>
-        학창시절에는 그림그리기를 좋아하여 대학을 미술쪽으로 진학할려했으나 실패하여 방황하며 <br>
-        1년간 아르바이트를 하며 협동심과 단체생활을 배웠으며 그 이후 재수를 하여 대학에 들어갔습니다. <br>
-        군 제대 후 과가 적성에 맞지않아 자퇴를 결정했으며 <br>
-        그 이후 국비지원을 통해 6개월간 기본적인 자바,파이썬,제이쿼리,리액트 등을 배웠습니다. <br>
+        국비지원을 통해 6개월간 기본적인 자바,파이썬,제이쿼리,리액트 등을 배웠습니다. <br>
         이 짧은 순간에 완벽히 마스터 할수는 없었지만 다른 사람들과 소통할 정도는 되었습니다. <br>
         항상 열심히 하고 배우고자 하는 사람이 되겠습니다.
 
@@ -96,7 +103,7 @@
       <h2>STACKS</h2>
 
       <div class="stack-container"> 
-        <ul>
+        <div class="front-end">
           <div class="flip">
             <div class="card">
               <div class="front">
@@ -186,7 +193,7 @@
               </div>
             </div>
           </div>
-      
+        </div>
       </div>
       <div class="grid-stack">
         <span class="item">
@@ -240,23 +247,17 @@
         </span>
       </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </section>
     <section class="section">
       <h2>WORKS</h2>
+      
+      <div style="padding:10px; background-color: skyblue;">
+        <div class="slider-div">
+          <div><img src="project_img/01.png"></div>
+
+         </div>
+      </div> 
+
     </section>
 
     <footer class="section">
@@ -278,406 +279,22 @@
 <style>
 body {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-header {
-  font-size: 16px;
-  -webkit-tap-highlight-color: transparent;
-  position: fixed;
-  width: 100%;
-  height: 70px;
-  padding: 0 50px;
-  margin: 0 auto;
-  box-sizing: border-box;
-  color: white;
-  font-weight: 500;
-  z-index: 9999;
-  
-}
-
-.hamburger-button {
-	position: absolute;
-	transition: .3s ease-in-out;
-	width: 45px;
-	height: 34px;
-	display: none;
-	top: 2rem;
-	right: 2rem;
-	z-index: 100;
-}
-
-.hamburger-button span {
-		position: absolute;
-		height: 8px;
-		border-radius: 4px;
-		width: 100%;
-		background-color: white;
-		top: 0;
-		transition: transform .2s ease-in-out, opacity .2s ease-in-out;
-	}
-.hamburger-button span:nth-child(1) {
-		top: 0px;
-	}
-
-.hamburger-button span:nth-child(2),
-.hamburger-button span:nth-child(3) {
-	top: 13px;
-}
-
-.hamburger-button span:nth-child(4) {
-	top: 26px;
-}
-
-.hamburger-button.active span {
-	background-color: #FFF;
-}
-
-.hamburger-button.active span:nth-child(1),
-.hamburger-button.active span:nth-child(4) {
-		opacity: 0;
-}
-
-.hamburger-button.active span:nth-child(2) {
-	transform: rotate(45deg);
-}
-
-.hamburger-button.active span:nth-child(3) {
-	transform: rotate(-45deg);
-}
-
-.overlay {
-  position: fixed;
-  background: black;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 0;
-  opacity: 0;
-  visibility: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.3s;
-}
-
-.overlay nav ul {
-  list-style: none;
-  padding:0;
-  margin: 0;
-}
-
-.overlay nav ul li {
-  margin: 1rem 0;
-  opacity: 0;
-}
-
-.overlay nav ul li a {
-  text-decoration: none;
-  color: white;
-  font-size: 30px;
-  transition: opacity 0.2s ease;
-  position: relative;
-  padding: 6px 12px;
-}
-
-.overlay nav ul li a::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 4px;
-  background: #FFF;
-  transition: all .3s ease-out;
-}
-
-.overlay nav ul li a:hover::after {
-  width: 100%;
-}
-
-@keyframes fadeInLeft {
-  0% { opacity: 0; transform: translateX(-25%);}
-  100% { opacity: 1; transform: translateX(0);}
-}
-
-.overlay.visible {
-  height: 100%;
-  opacity: .9;
-  
-}
-.overlay.visible nav ul li {
-  animation: fadeInLeft 0.3s ease forwards;
-}
-
-.overlay.visible nav ul li:nth-child(1) {
-  animation-delay: 0.23s;
-}
-.overlay.visible nav ul li:nth-child(2) {
-  animation-delay: 0.26s;
-}
-.overlay.visible nav ul li:nth-child(3) {
-  animation-delay: 0.29s;
-}
-.overlay.visible nav ul li:nth-child(4) {
-  animation-delay: 0.32s;
-}
-.overlay.visible nav ul li:nth-child(5) {
-  animation-delay: 0.35s;
-}
-
-
-.logo img {
-  height: 40px;
-  filter: invert(50%) sepia(62%) saturate(2279%) hue-rotate(159deg) brightness(92%) contrast(101%);
-}
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; 
-  }
-
-.navbar-menu { 
-  display: flex;
-  list-style: none;
-}
-
-.navbar-menu li {
-  padding: 8px 12px;
-}
-.navbar-menu a {
-  font-size: 20px;
-  text-decoration: none;
-  position: relative;
-  padding: 10px 20px;
-  color: white;
-}
-
-.navbar-menu li a::after{
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 4px;
-  background: #FFF;
-  transition: all .3s ease-out;
-  }
-
-.navbar-menu li a:hover::after { 
-  width: 100%; 
-}
-
-
-.title {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-}
-
-.title > h1 {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  pointer-events: none;
-  padding: 0 10px;
-  margin: 0;
-  color: white;
-  font-size: 9.1vw;
-  font-weight: 900;
-  overflow: hidden;
-  white-space: nowrap; /* 스페이스와 탭,줄바꿈, 자동줄바꿈을 어떻게 처리할지 정하는 속성 */
-  border-right: 3px solid white;
-  animation: blink 1s infinite, typing 2s steps(22);
+  background-color: #131313;
 }
 
 
 
-@keyframes blink{
-  50% {
-    border-color: transparent;
-  }
-}
-@keyframes typing {
-  from{
-    width: 0;
-  }
-  to{
-    width: 65vw;
-  }
-}
-.title > h2 {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  pointer-events: none;
-  color: white;
-  text-align: center;
-  font-size: 3vw;
-  font-weight: 700;
-  letter-spacing: 1.2vw;
-}
-
-.scroll > p {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  pointer-events: none;
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 110px;
-  color: white;
-}
-
-.scroll-down {
-z-index: 11;
-position: fixed;
-width: 42px;
-height: 64px;
-left: 50%;
-transform: translate(-50%, -50%);
-bottom: 10px;
-border: 2px solid white;
-border-radius: 50px;
-}
-
-.scroll-down::before, .scroll-down::after {
-  content: '';
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  border: 2px solid white;
-  height: 10px;
-  width: 10px;
-  transform: translate(-50%, -50%)rotate(45deg);
-  border-top: transparent;
-  border-left: transparent;
-  animation: MoveArrow 1s ease-in-out infinite;
-}
-.scroll-down::after{
-  top: 30%;
-  animation-delay: 0.3s;
-}
-@keyframes MoveArrow{
-  0%{
-    opacity: 0;
-  }
-  30%{
-    opacity: 1;
-  }
-  60%{
-    opacity: 1;
-  }
-  100%{
-    opacity: 0;
-    top: 90%;
-  }
-}
-
-.stack-container {
-    margin: 0;
-    display: flex;
-    justify-content: flex-start;
-    padding-left: 3vw;
-     
-}
-
-.stack-container img {
-  height: 80px;
-  width: 80px;
-}
-
-.stack-container ul {
-  list-style: none;
-}
-
-.flip {
-  position: relative;
-  list-style-type: none;
-  float: left;
-  padding: 30px;
-  transform-style: preserve-3d;
-  height: 100px;
-  width: 150px;
-  perspective: 1100px;
-
-}
-
-.card {
-  
-  width: 100%; 
-  height: 100%;
-  position: relative;
-  transition: .4s;
-  transform-style: preserve-3d;
-  
-}
-
-
-.front, .back {
-  border: solid #2e2e2e;
-  background-color: black;
-  border-radius: 15px;
-  box-shadow: 5px 5px 5px;
-  position: absolute;
-  width: 100%; 
-  height: 100%;
-  backface-visibility: hidden;
-}
-.front {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-
-.back {
-   
-  transform: rotateY(180deg);
-
-}
-
-.flip:hover .card {
-  transform: rotateY(180deg);
-}
-
-.stacks {
-  text-align: center;
-  color: white;
-  font-weight: bold;
-  margin: 0;
-  font-size: large;
-}
-
-.stack-container p {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color: white;
-  text-align: center;
-  padding: 0;
-  margin: 0;
-  font-size: 0.8rem;
-}
-
-.grid-stack {
-  display: none;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));         
-  gap: 10px;
-  padding-left: 5px;
-  padding-right: 15px;
-
-}
-
-.item {
-  display: grid;
-  grid-template-columns: 1fr 5fr;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color: white;
-  background-color: black;
-  width: 100%;
-  height: 100%;
-  text-align: left;
-  justify-content: center;
-  align-items: center;
-  border-radius: 15px;
-  border: solid #2e2e2e;
-}
-
+@keyframes fadeInDown {
+        0% {
+            opacity: 0;
+            transform: translate3d(0, -100%, 0);
+        }
+        to {
+            opacity: 1;
+            transform: translateZ(0);
+        }
+    }
+ 
 h2 {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: whitesmoke;
@@ -685,7 +302,12 @@ h2 {
   justify-content: center;
   letter-spacing: 0.8vw;
   font-size: 4.5vw;
+  opacity: 0;
+  transition: all 0.5s;
+  animation: fadeInDown 1s;
 }
+
+
 
 .intro-text {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -703,6 +325,8 @@ h2 {
   font-weight: 300;
   
 }
+
+
 
 .contact-box {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -794,7 +418,20 @@ $(function() {
 	});
 });
 
+let observer = new IntersectionObserver((e)=>{
+    e.forEach((box)=>{
+        if (box.isIntersecting){
+        box.target.style.opacity = 1;
+        }
+    })
+})
 
+let h2 = document.querySelectorAll('h2') //h2 태그를 다 찾아줌
+observer.observe(h2[0]) //html 요소 감시해줌
+observer.observe(h2[1])
+observer.observe(h2[2])
+observer.observe(h2[3])
+observer.observe(h2[4])
 
 
 </script>

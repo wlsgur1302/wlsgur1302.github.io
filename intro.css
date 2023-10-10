@@ -1,0 +1,100 @@
+.title {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .title > h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    pointer-events: none;
+    padding: 0 10px;
+    margin: 0;
+    color: white;
+    font-size: 9.1vw;
+    font-weight: 900;
+    overflow: hidden;
+    white-space: nowrap; /* 스페이스와 탭,줄바꿈, 자동줄바꿈을 어떻게 처리할지 정하는 속성 */
+    border-right: 3px solid white;
+    animation: blink 1s infinite, typing 2s steps(22);
+  }
+  
+  
+  
+  @keyframes blink{
+    50% {
+      border-color: transparent;
+    }
+  }
+  @keyframes typing {
+    from{
+      width: 0;
+    }
+    to{
+      width: 65vw;
+    }
+  }
+  .title > h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    pointer-events: none;
+    color: white;
+    text-align: center;
+    font-size: 3vw;
+    font-weight: 700;
+    letter-spacing: 1.2vw;
+  }
+  
+  .scroll > p {
+    z-index: 11;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    pointer-events: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 110px;
+    color: white;
+  }
+  
+  .scroll-down {
+  z-index: 11;
+  position: absolute;
+  width: 42px;
+  height: 64px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: 10px;
+  border: 2px solid white;
+  border-radius: 50px;
+  }
+  
+  .scroll-down::before, .scroll-down::after {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    border: 2px solid white;
+    height: 10px;
+    width: 10px;
+    transform: translate(-50%, -50%)rotate(45deg);
+    border-top: transparent;
+    border-left: transparent;
+    animation: MoveArrow 1s ease-in-out infinite;
+  }
+  .scroll-down::after{
+    top: 30%;
+    animation-delay: 0.3s;
+  }
+  @keyframes MoveArrow{
+    0%{
+      opacity: 0;
+    }
+    30%{
+      opacity: 1;
+    }
+    60%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 0;
+      top: 90%;
+    }
+  }
